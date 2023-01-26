@@ -15,11 +15,12 @@
             <label for="guests">Number of Guests</label>
             <input type="number" name="guests" id="guests">
 
-            <label for="location">Location</label>
-            <input type="text" name="loaction" id="location">
+            <label for="venue">Location</label>
+            <input type="text" name="venue" id="venue">
 
             <label for="description">description</label>
-            <textarea name="description" rows="1" cols="30"></textarea>
+            <textarea name="description" id="description" rows="1" cols="30"></textarea>
+            <input type="submit" value="Add Event">
         </form>
         
     <hr>
@@ -27,7 +28,7 @@
     {% for event in events %}  
     <div>
         <p>
-            {{ event.date }}: <b>{{ event.eventname }}, {{ event.roomlocation }}, Capacity:{{ event.guest }} - {{ event.description }}</b>
+            {{ event.date }}: <b>{{ event.eventname }}, {{ event.roomlocation }}, Capacity:{{ event.guests }} - {{ event.description }}</b>
         </p>
         </div>
     {% endfor %}

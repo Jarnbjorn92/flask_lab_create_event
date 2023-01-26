@@ -8,4 +8,3 @@ class Event():
         self.roomlocation = room_location
         self.description = description
 
-
