@@ -7,4 +7,3 @@ class Event():
         self.guests = guests
         self.roomlocation = room_location
         self.description = description
-
