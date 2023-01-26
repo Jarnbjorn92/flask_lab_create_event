@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>{{ title }} - My Events</title>
+    </head>
+    <body>
+        <h1>Events Planner</h1>
+
+        <form action="/events" method="post">
+            <label for="date">Date</label>
+            <input type="datetime-local" name="date" id="date">
+            <label for="event_name">Event</label>
+            <input type="text" name="event_name" id="event_name">
+            <label for="guests">Number of Guests</label>
+            <input type="number" name="guests" id="guests">
+
+        </form>
+
+    </body>
+</html>
