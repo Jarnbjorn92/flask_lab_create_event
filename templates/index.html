@@ -8,12 +8,28 @@
         <form action="/events" method="post">
             <label for="date">Date</label>
             <input type="datetime-local" name="date" id="date">
+
             <label for="event_name">Event</label>
             <input type="text" name="event_name" id="event_name">
+
             <label for="guests">Number of Guests</label>
             <input type="number" name="guests" id="guests">
 
-        </form>
+            <label for="location">Location</label>
+            <input type="text" name="loaction" id="location">
 
+            <label for="description">description</label>
+            <textarea name="description" rows="1" cols="30"></textarea>
+        </form>
+        
+    <hr>
+    <h3>Events List:</h3>
+    {% for event in events %}  
+    <div>
+        <p>
+            {{ event.date }}: <b>{{ event.eventname }}, {{ event.roomlocation }}, Capacity:{{ event.guest }} - {{ event.description }}</b>
+        </p>
+        </div>
+    {% endfor %}
     </body>
 </html>
